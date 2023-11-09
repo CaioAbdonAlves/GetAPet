@@ -16,6 +16,9 @@ app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
 app.use(express.static("public"));
 
 // Routes
+const userRoutes = require('./routes/UserRoutes.js');
+
+app.use('/users', userRoutes);
 
 app.listen(port, () => {
     console.log(`O servidor backend está rodando na porta: ${port}`);
