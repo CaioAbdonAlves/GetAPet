@@ -20,6 +20,10 @@ const userRoutes = require('./routes/UserRoutes.js');
 
 app.use('/users', userRoutes);
 
+const petRoutes = require('./routes/PetRoutes.js');
+
+app.use('/pets', petRoutes);
+
 app.listen(port, () => {
     console.log(`O servidor backend está rodando na porta: ${port}`);
 })
